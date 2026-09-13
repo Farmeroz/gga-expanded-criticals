@@ -1,0 +1,28 @@
+[
+  {
+    "source": "https://raw.githubusercontent.com/crnormand/gurps/v0.18.23/module/dierolls/dieroll.js",
+    "fixture": "gga-0.18.23/module/dierolls/dieroll.js",
+    "sha256": "3bf9455532a052e2d6fca70f1aebc8a25adbd830b50102687a270457de92dd81"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/crnormand/gurps/v0.18.23/module/chat/if.js",
+    "fixture": "gga-0.18.23/module/chat/if.js",
+    "sha256": "af9c24a0543b89f565b407c2951eaf61c0279fe2c7a220269b2e96076ab49f93"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/crnormand/gurps/v0.18.23/templates/die-roll-chat-message.hbs",
+    "fixture": "gga-0.18.23/templates/die-roll-chat-message.hbs",
+    "sha256": "3062a92f61643a9020f555e8a645bc48d1404f7e262845648ebb53df742aedd8"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/crnormand/gurps/v0.18.23/LICENSE.txt",
+    "fixture": "gga-0.18.23/LICENSE.txt",
+    "sha256": "ee2c7b43bd2f9f0d4dafc2571c53f86ccb80bcbb2ce24380c81845e9dbcd3dad"
+  },
+  {
+    "source": "https://raw.githubusercontent.com/crnormand/gurps/v0.18.23/module/gurps.js",
+    "fixture": "gga-0.18.23/setLastTargetedRoll.js.txt",
+    "note": "Verbatim setLastTargetedRoll assignment only",
+    "sha256": "11ec53e1c9c33ebd36c1e0a2f17b30362cdb9da3fdaeea89e7430780244aac35"
+  }
+]
