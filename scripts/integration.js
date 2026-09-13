@@ -1,6 +1,6 @@
-import { expandCritical, validSettings } from "./rules.js";
+import { expandCritical, validSettings } from './rules.js';
 
-const INSTALLED = Symbol.for("gga-expanded-criticals.wrapper");
+const INSTALLED = Symbol.for('gga-expanded-criticals.wrapper');
 
 /**
  * GGA 0.18.23 calls this synchronously before cloning/broadcasting chatdata
@@ -9,10 +9,11 @@ const INSTALLED = Symbol.for("gga-expanded-criticals.wrapper");
  * incoming socket copies. Never reinterpret an incoming or historical result.
  */
 export function installIntegration(gurps, getSettings, report = () => {}) {
-  if (typeof gurps?.setLastTargetedRoll !== "function") {
+  if (typeof gurps?.setLastTargetedRoll !== 'function') {
     return { installed: false, reason: "GGA's setLastTargetedRoll function is unavailable." };
   }
-  if (gurps.setLastTargetedRoll[INSTALLED]) return { installed: true, reason: "Already installed." };
+  if (gurps.setLastTargetedRoll[INSTALLED])
+    return { installed: true, reason: 'Already installed.' };
   const original = gurps.setLastTargetedRoll;
   let reportedProblem = false;
   function wrappedSetLastTargetedRoll(...args) {
@@ -21,12 +22,16 @@ export function installIntegration(gurps, getSettings, report = () => {}) {
       // GGA must propagate once, never cause a second roll/store/socket send.
       try {
         const settings = getSettings();
-        if (!validSettings(settings)) throw new Error("Invalid critical progression settings.");
+        if (!validSettings(settings)) throw new Error('Invalid critical progression settings.');
         expandCritical(args[0], settings);
       } catch (error) {
         if (!reportedProblem) {
           reportedProblem = true;
-          try { report(error); } catch { /* Notifications must not block the roll. */ }
+          try {
+            report(error);
+          } catch {
+            /* Notifications must not block the roll. */
+          }
         }
       }
     }
@@ -34,5 +39,5 @@ export function installIntegration(gurps, getSettings, report = () => {}) {
   }
   Object.defineProperty(wrappedSetLastTargetedRoll, INSTALLED, { value: true });
   gurps.setLastTargetedRoll = wrappedSetLastTargetedRoll;
-  return { installed: true, reason: "Active." };
+  return { installed: true, reason: 'Active.' };
 }

@@ -1,0 +1,9 @@
+[
+  "LICENSE.txt",
+  "README.md",
+  "module.json",
+  "scripts/integration.js",
+  "scripts/log.mjs",
+  "scripts/main.js",
+  "scripts/rules.js"
+]
