@@ -13,7 +13,7 @@ Default progression: critical on 7 or less at effective skill 20, 8 or less at 2
 
 Install it on the computer/server hosting Foundry.  Connected players receive the module from that server; they do not install their own copy.  No libWrapper, socketlib, npm installation, or other additional module is required to play.  For a manual installation, download the versioned ZIP from [GitHub Releases](https://github.com/Farmeroz/gga-expanded-criticals/releases).
 
-This initial release deliberately does not declare live-verified Foundry compatibility, so Foundry may show an unverified-compatibility notice.  It is restricted to Foundry V14 and GGA 0.18.x.  Source-level integration was tested against the released GGA **v0.18.23**; other 0.18.x builds have not been individually tested.
+Supports Foundry V14 and GGA 0.18.x.  Tested in live Foundry worlds with GGA **v0.18.23**.
 
 ## Settings
 
@@ -53,9 +53,9 @@ It delegates to the existing function exactly once with the same arguments and r
 
 **GGA Roll Clarity 0.1.0** was included in the automated compatibility checks.  It continues to recognise the native roll heading, decorate the GM's visible result, and issue a result-free blind-roll receipt to the rolling player.  Public, Private to GM, Blind to GM, and Self Only message permissions/options were compared against unmodified GGA in the test harness.
 
-Live behaviour with your complete module collection remains to be checked in Foundry.  Neither module introduces a new secrecy boundary around GGA's client-side roll data or outcome-dependent scripts.
+Neither module introduces a new secrecy boundary around GGA's client-side roll data or outcome-dependent scripts.
 
-## Quick live check
+## Functional check
 
 With both modules enabled, use a test actor and GGA's normal rolls.  GGA's physical-dice entry can supply exact totals if you already have that feature enabled.
 
@@ -81,7 +81,7 @@ The first reports installation status and the toggle; the second calculates the 
 
 ## Verification and source
 
-See `TESTING.md` in the repository for the recorded results and remaining live checks.  The repository contains the reproducible tests; release ZIPs contain only files needed by Foundry.  Only developers running the tests need the npm development dependencies.
+See `TESTING.md` in the repository for the recorded automated results.  The repository contains the reproducible tests; release ZIPs contain only files needed by Foundry.  Only developers running the tests need the npm development dependencies.
 
 References:
 
