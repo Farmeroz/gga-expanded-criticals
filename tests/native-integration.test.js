@@ -1,3 +1,4 @@
+import * as log from '../scripts/log.mjs';
 /** Run GGA's actual v0.18.23 roll routine and template with mocked Foundry services. */
 import test from 'node:test';
 import assert from 'node:assert/strict';
@@ -339,6 +340,7 @@ test('Foundry lifecycle registers three world settings, installs on V14/GGA 0.18
     criticalThreshold,
     installIntegration,
     console,
+    log,
     Hooks: { once: (event, fn) => callbacks.set(event, fn) },
     foundry: {
       data: {

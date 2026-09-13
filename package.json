@@ -1,14 +1,29 @@
 {
   "name": "gga-expanded-criticals",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "type": "module",
   "scripts": {
-    "test": "node --test tests/*.test.js"
+    "test:setup": "node tools/test-sources.mjs",
+    "test": "node tools/run-tests.mjs",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check:syntax": "node tools/check-syntax.mjs",
+    "build": "node tools/build-release.mjs",
+    "check": "npm run format:check && npm run check:syntax && npm test && npm run build"
   },
   "devDependencies": {
     "handlebars": "4.7.8",
     "happy-dom": "20.8.4",
-    "xregexp": "5.1.2"
+    "xregexp": "5.1.2",
+    "prettier": "3.9.6",
+    "fflate": "0.8.2"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Farmeroz/gga-expanded-criticals.git"
   }
 }

@@ -1,6 +1,6 @@
 /** GURPS 4e house rule. No Foundry globals or side effects. */
 export const ID = 'gga-expanded-criticals';
-export const VERSION = '0.1.0';
+export const VERSION = '0.1.1';
 export const DEFAULTS = Object.freeze({ enabled: true, firstExtraSkill: 20, interval: 5 });
 
 export function validSettings(settings) {

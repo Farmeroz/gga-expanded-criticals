@@ -1,3 +1,4 @@
+import * as log from './log.mjs';
 import { ID, VERSION, DEFAULTS, criticalThreshold } from './rules.js';
 import { installIntegration } from './integration.js';
 
@@ -72,5 +73,5 @@ Hooks.once('ready', () => {
     ui.notifications.warn(
       `GGA Expanded Criticals: ${status.reason} The house rule has not activated.`,
     );
-  else console.info(`GGA Expanded Criticals | ${VERSION} active. Live-world verification pending.`);
+  else log.info(`${VERSION} active.`);
 });
