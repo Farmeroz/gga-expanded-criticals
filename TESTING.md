@@ -2,13 +2,13 @@
 
 Recorded on **6 September 2026**: **20 tests passed, 0 failed**.
 
-Environment: Node.js v24.19.0, Handlebars 4.7.8, Happy DOM 20.8.4, and XRegExp 5.1.2.  Foundry services, settings, dice evaluation, token actions, and transport were mocked.  This is **not a live Foundry world or real-browser verification**.
+Environment: Node.js v24.19.0, Handlebars 4.7.8, Happy DOM 20.8.4, and XRegExp 5.1.2. Foundry services, settings, dice evaluation, token actions, and transport were mocked. This is **not a live Foundry world or real-browser verification**.
 
 ## What ran
 
-The source integration tests execute the actual `_doRoll` routine from GGA's released **v0.18.23**, its native `setLastTargetedRoll` assignment, its native Handlebars chat template, and its `/if` processor.  They do not substitute a rewritten version of GGA's critical-success calculation.  Pinned upstream fixtures and their licences are in `tests/fixtures`; URLs and SHA-256 hashes are in `tests/fixtures/sources.json`.
+The source integration tests execute the actual `_doRoll` routine from GGA's released **v0.18.23**, its native `setLastTargetedRoll` assignment, its native Handlebars chat template, and its `/if` processor. They do not substitute a rewritten version of GGA's critical-success calculation. Pinned upstream fixtures and their licences are in `tests/fixtures`; URLs and SHA-256 hashes are in `tests/fixtures/sources.json`.
 
-The Roll Clarity compatibility test uses the actual `ReceiptController`, heading parser, and decorator from **GGA Roll Clarity 0.1.0**.  It supplies the real GGA template output after critical expansion, checks the blind-roll receipt, and exercises the visible/hidden-result decoration paths.  It does not simulate every aspect of Foundry's document lifecycle or every installed third-party module.
+The Roll Clarity compatibility test uses the actual `ReceiptController`, heading parser, and decorator from **GGA Roll Clarity 0.1.0**. It supplies the real GGA template output after critical expansion, checks the blind-roll receipt, and exercises the visible/hidden-result decoration paths. It does not simulate every aspect of Foundry's document lifecycle or every installed third-party module.
 
 Passed checks:
 
@@ -42,7 +42,7 @@ npm install
 npm test
 ```
 
-Development dependencies are only for tests; Foundry does not load them.  The pure rules/wrapper tests can be run without installing dependencies:
+Development dependencies are only for tests; Foundry does not load them. The pure rules/wrapper tests can be run without installing dependencies:
 
 ```sh
 node --test tests/rules.test.js
@@ -56,6 +56,6 @@ GEC_TEST_DEPS=/tmp/gga-test-deps node --test tests/*.test.js
 
 ## Remaining live checks
 
-Run the short checklist in `README.md` on the actual Foundry V14 / GGA 0.18.x world.  Confirm the real settings form saves correctly, connected players receive changes, representative sheet rolls use the expected path, critical-dependent macros behave as intended, and Roll Clarity works with the rest of the installed chat/dice modules.
+Run the short checklist in `README.md` on the actual Foundry V14 / GGA 0.18.x world. Confirm the real settings form saves correctly, connected players receive changes, representative sheet rolls use the expected path, critical-dependent macros behave as intended, and Roll Clarity works with the rest of the installed chat/dice modules.
 
-The integration targets the GGA 0.18.x family but only release **0.18.23** was used as the pinned source fixture.  A custom macro or another module that computes its own critical result, suppresses the native result-store call, or replaces that function without delegating can bypass this module.  GGA updates that move critical-dependent behaviour earlier in the roll routine may require an integration update.
+The integration targets the GGA 0.18.x family but only release **0.18.23** was used as the pinned source fixture. A custom macro or another module that computes its own critical result, suppresses the native result-store call, or replaces that function without delegating can bypass this module. GGA updates that move critical-dependent behaviour earlier in the roll routine may require an integration update.
