@@ -1,4 +1,4 @@
-# GGA Expanded Criticals 0.1.1
+# GGA Expanded Criticals 0.1.2
 
 An optional house-rule module for **GURPS 4e Game Aid (GGA) 0.18.x on Foundry V14**. It expands the critical-success range at high effective skill and uses GGA's own critical-success chat presentation and stored roll result.
 
@@ -56,3 +56,7 @@ To stop applying the rule, untick **Enable expanded critical successes**. To rem
 Report problems through [GitHub Issues](https://github.com/Farmeroz/gga-expanded-criticals/issues). Released under the [MIT licence](LICENSE.txt).
 
 GURPS is a trademark of Steve Jackson Games. This unofficial module is not affiliated with or endorsed by Steve Jackson Games, Foundry Gaming LLC, or the GURPS Game Aid maintainers. No rulebook text, artwork, or critical-result tables are bundled.
+
+## Help tooltips
+
+Hover over a control or focus it with the keyboard for a short explanation. Press Escape to dismiss the help. Under **Configure Settings → Module Settings → GGA Expanded Criticals**, turn off **Show help tooltips** to hide optional help on your client. Labels, settings descriptions, and important notices remain visible. Other users keep their own preference.
