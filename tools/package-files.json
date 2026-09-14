@@ -2,8 +2,10 @@
   "LICENSE.txt",
   "README.md",
   "module.json",
+  "scripts/help.mjs",
   "scripts/integration.js",
   "scripts/log.mjs",
   "scripts/main.js",
-  "scripts/rules.js"
+  "scripts/rules.js",
+  "scripts/tooltip-engine.mjs"
 ]
