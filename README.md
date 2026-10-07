@@ -1,4 +1,8 @@
-# GGA Expanded Criticals 0.1.2
+# GGA Expanded Criticals 0.1.3
+
+## Release 0.1.3
+
+Declare verified Foundry VTT 14 compatibility, reflecting maintainer live testing. No runtime or GURPS 4e rules changes.
 
 An optional house-rule module for **GURPS 4e Game Aid (GGA) 0.18.x on Foundry V14**. It expands the critical-success range at high effective skill and uses GGA's own critical-success chat presentation and stored roll result.
 
